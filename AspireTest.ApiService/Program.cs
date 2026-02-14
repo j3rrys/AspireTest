@@ -1,6 +1,7 @@
 using AspireTest.ApiService.Controllers;
 using AspireTestInfra.Services.Implementations;
 using AspireTestInfra.Services.Interfaces;
+using Scalar.AspNetCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -26,6 +27,7 @@ app.UseExceptionHandler();
 if (app.Environment.IsDevelopment())
 {
     app.MapOpenApi();
+    app.MapScalarApiReference();
 }
 
 app.MapDefaultEndpoints()
