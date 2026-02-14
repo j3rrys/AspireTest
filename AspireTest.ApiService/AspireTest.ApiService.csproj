@@ -9,6 +9,7 @@
   <ItemGroup>
     <ProjectReference Include="..\AspireTest.ServiceDefaults\AspireTest.ServiceDefaults.csproj" />
     <ProjectReference Include="..\AspireTestCore\AspireTestCore.csproj" />
+    <ProjectReference Include="..\AspireTestInfra\AspireTestInfra.csproj" />
   </ItemGroup>
 
   <ItemGroup>

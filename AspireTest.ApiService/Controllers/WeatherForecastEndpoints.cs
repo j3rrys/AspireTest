@@ -24,29 +24,5 @@ public static class WeatherForecastEndpoints
             return forecast;
         })
         .WithName("GetAllWeatherForecasts");
-
-        group.MapGet("/{id}", (int id) =>
-        {
-            //return new WeatherForecast { ID = id };
-        })
-        .WithName("GetWeatherForecastById");
-
-        group.MapPut("/{id}", (int id, WeatherForecast input) =>
-        {
-            return TypedResults.NoContent();
-        })
-        .WithName("UpdateWeatherForecast");
-
-        group.MapPost("/", (WeatherForecast model) =>
-        {
-            //return TypedResults.Created($"/api/WeatherForecasts/{model.ID}", model);
-        })
-        .WithName("CreateWeatherForecast");
-
-        group.MapDelete("/{id}", (int id) =>
-        {
-            //return TypedResults.Ok(new WeatherForecast { ID = id });
-        })
-        .WithName("DeleteWeatherForecast");
     }
 }

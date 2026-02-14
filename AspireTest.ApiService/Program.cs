@@ -23,6 +23,8 @@ if (app.Environment.IsDevelopment())
 
 app.MapDefaultEndpoints()
    .MapWeatherForecastEndpoints();
+  
+app.MapFDTEndpoints();
 
 app.Run();
 
