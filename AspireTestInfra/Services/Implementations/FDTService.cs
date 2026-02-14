@@ -6,11 +6,15 @@ using System.Text;
 
 namespace AspireTestInfra.Services.Implementations;
 
-internal class FDTService : IFDTService
+public class FDTService : IFDTService
 {
     private List<FDT> _fdtData;
-    public FDTService(string excelPath)
+    public FDTService(string? excelPath)
     {
+        if (excelPath == null)
+        {
+            throw new ArgumentNullException(nameof(excelPath), "Le chemin du fichier Excel ne peut pas être null.");
+        }
         _fdtData = FdtImporter.ImportFromExcel(excelPath);
     }
     public Task<List<FDT>> GetAllFDTAsync()

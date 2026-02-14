@@ -1,4 +1,5 @@
 ﻿using AspireTestCore.Models;
+using AspireTestInfra.Services.Interfaces;
 using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.OpenApi;
 namespace AspireTest.ApiService.Controllers;
@@ -9,15 +10,15 @@ public static class FDTEndpoints
     {
         var group = routes.MapGroup("/api/FDT").WithTags(nameof(FDT));
 
-        group.MapGet("/", () =>
+        group.MapGet("/", async (IFDTService fDTService) =>
         {
-            return new [] { new FDT() };
+            return await fDTService.GetAllFDTAsync();
         })
         .WithName("GetAllFDTs");
 
-        group.MapGet("/{id}", (int id) =>
+        group.MapGet("/{id}", async (IFDTService fDTService,int id) =>
         {
-            //return new FDT { ID = id };
+            return await fDTService.GetEmployeFDtAsync(id);
         })
         .WithName("GetFDTById");
 

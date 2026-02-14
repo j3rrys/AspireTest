@@ -5,7 +5,7 @@ using System.Text;
 
 namespace AspireTestInfra.Services.Interfaces;
 
-internal interface IFDTService
+public interface IFDTService
 {
     /// <summary>
     /// Get the FDT (Feuille de Temps) for a specific employee based on their ID. 

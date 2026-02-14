@@ -1,4 +1,6 @@
 using AspireTest.ApiService.Controllers;
+using AspireTestInfra.Services.Implementations;
+using AspireTestInfra.Services.Interfaces;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -7,6 +9,11 @@ builder.AddServiceDefaults();
 
 // Add services to the container.
 builder.Services.AddProblemDetails();
+
+builder.Services.AddScoped<IFDTService>(provider => {
+    string? excelPath = builder.Configuration.GetValue<string>("ExcelPath");
+    return new FDTService(excelPath);
+});
 
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 builder.Services.AddOpenApi();

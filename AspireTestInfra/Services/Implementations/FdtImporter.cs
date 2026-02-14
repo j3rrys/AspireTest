@@ -21,7 +21,7 @@ public class FdtImporter
     /// </summary>
     /// <param name="filePath">Chemin du fichier Excel</param>
     /// <returns>Liste des entrées de feuille de temps</returns>
-    public static List<FDT> ImportFromExcel(string filePath)
+    public static List<FDT> ImportFromExcel(string? filePath)
     {
         var fdtList = new List<FDT>();
 
