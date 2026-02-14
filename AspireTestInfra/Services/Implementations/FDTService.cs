@@ -3,6 +3,8 @@ using AspireTestInfra.Services.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using AspireTestCore.DTOs;
+using YourNamespace.Mappers;
 
 namespace AspireTestInfra.Services.Implementations;
 
@@ -17,14 +19,14 @@ public class FDTService : IFDTService
         }
         _fdtData = FdtImporter.ImportFromExcel(excelPath);
     }
-    public Task<List<FDT>> GetAllFDTAsync()
+    public Task<List<FdtDto>> GetAllFDTAsync()
     {
-        return Task.FromResult(_fdtData);
+        return Task.FromResult(_fdtData.ToDto());
     }
 
-    public Task<List<FDT>> GetEmployeFDtAsync(int IdEmploye)
+    public Task<List<FdtDto>> GetEmployeFDtAsync(int IdEmploye)
     {
         _fdtData = _fdtData.Where(f => f.Employe == IdEmploye).ToList();
-        return Task.FromResult(_fdtData);
+        return Task.FromResult(_fdtData.ToDto());
     }
 }

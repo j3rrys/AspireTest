@@ -1,4 +1,5 @@
 ﻿using AspireTestCore.Models;
+using AspireTestCore.DTOs;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -13,13 +14,13 @@ public interface IFDTService
     /// </summary>
     /// <param name="IdEmploye"></param>
     /// <returns>FDT</returns>
-    Task<List<FDT>> GetEmployeFDtAsync(int IdEmploye);
+    Task<List<FdtDto>> GetEmployeFDtAsync(int IdEmploye);
     /// <summary>
     /// Get all FDT (Feuille de Temps) records. 
     /// This method retrieves a list of all time sheets, which may include details for multiple employees, projects, and time periods. 
     /// It provides an overview of the time sheet data available in the system.
     /// </summary>
     /// <returns>List<FDT></returns>
-    Task<List<FDT>> GetAllFDTAsync();
+    Task<List<FdtDto>> GetAllFDTAsync();
 
 }
