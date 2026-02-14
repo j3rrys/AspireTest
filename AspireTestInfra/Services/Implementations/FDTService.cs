@@ -29,4 +29,9 @@ public class FDTService : IFDTService
         _fdtData = _fdtData.Where(f => f.Employe == IdEmploye).ToList();
         return Task.FromResult(_fdtData.ToDto());
     }
+
+    public Task<FdtStatistiquesEmployeDto> GetStatistiquesEmployeDtosAsync(int idEmploye)
+    {
+        return Task.FromResult(_fdtData.CalculerStatistiquesEmploye(idEmploye));
+    }
 }

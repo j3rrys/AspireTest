@@ -22,22 +22,10 @@ public static class FDTEndpoints
         })
         .WithName("GetFDTById");
 
-        group.MapPut("/{id}", (int id, FDT input) =>
+       group.MapGet("/statistiques/{id}", async (IFDTService fDTService,int id) =>
         {
-            return TypedResults.NoContent();
+            return await fDTService.GetStatistiquesEmployeDtosAsync(id);
         })
-        .WithName("UpdateFDT");
-
-        group.MapPost("/", (FDT model) =>
-        {
-            //return TypedResults.Created($"/api/FDTs/{model.ID}", model);
-        })
-        .WithName("CreateFDT");
-
-        group.MapDelete("/{id}", (int id) =>
-        {
-            //return TypedResults.Ok(new FDT { ID = id });
-        })
-        .WithName("DeleteFDT");
+        .WithName("GetStatistiquesById");
     }
 }

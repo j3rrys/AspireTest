@@ -22,5 +22,11 @@ public interface IFDTService
     /// </summary>
     /// <returns>List<FDT></returns>
     Task<List<FdtDto>> GetAllFDTAsync();
+    /// <summary>
+    /// Get statistics for a specific employee based on their ID.
+    /// </summary>
+    /// <param name="idEmploye"></param>
+    /// <returns>FdtStatistiquesEmployeDto</returns>
+    Task<FdtStatistiquesEmployeDto> GetStatistiquesEmployeDtosAsync(int idEmploye);
 
 }
