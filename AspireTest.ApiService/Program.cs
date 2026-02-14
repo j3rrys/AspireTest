@@ -21,9 +21,8 @@ if (app.Environment.IsDevelopment())
     app.MapOpenApi();
 }
 
-app.MapDefaultEndpoints();
-
-app.MapWeatherForecastEndpoints();
+app.MapDefaultEndpoints()
+   .MapWeatherForecastEndpoints();
 
 app.Run();
 
