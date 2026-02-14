@@ -3,4 +3,5 @@
   <Project Path="AspireTest.AppHost/AspireTest.AppHost.csproj" />
   <Project Path="AspireTest.ServiceDefaults/AspireTest.ServiceDefaults.csproj" />
   <Project Path="AspireTest.Web/AspireTest.Web.csproj" />
+  <Project Path="AspireTestCore/AspireTestCore.csproj" Id="6600a2f0-1a71-47d8-af81-286fff939067" />
 </Solution>
