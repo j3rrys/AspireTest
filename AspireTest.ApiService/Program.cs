@@ -1,6 +1,6 @@
 using AspireTest.ApiService.Controllers;
+using AspireTestCore.Interfaces;
 using AspireTestInfra.Services.Implementations;
-using AspireTestInfra.Services.Interfaces;
 using Scalar.AspNetCore;
 
 var builder = WebApplication.CreateBuilder(args);

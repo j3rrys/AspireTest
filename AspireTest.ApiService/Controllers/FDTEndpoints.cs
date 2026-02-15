@@ -1,5 +1,5 @@
-﻿using AspireTestCore.Models;
-using AspireTestInfra.Services.Interfaces;
+﻿using AspireTestCore.Interfaces;
+using AspireTestCore.Models;
 using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.OpenApi;
 namespace AspireTest.ApiService.Controllers;

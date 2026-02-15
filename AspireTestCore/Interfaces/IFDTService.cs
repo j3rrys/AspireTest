@@ -4,7 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace AspireTestInfra.Services.Interfaces;
+namespace AspireTestCore.Interfaces;
 
 public interface IFDTService
 {

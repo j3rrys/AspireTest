@@ -1,10 +1,10 @@
 ﻿using AspireTestCore.Models;
-using AspireTestInfra.Services.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Text;
 using AspireTestCore.DTOs;
 using YourNamespace.Mappers;
+using AspireTestCore.Interfaces;
 
 namespace AspireTestInfra.Services.Implementations;
 
